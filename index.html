@@ -5,26 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trade Stops</title>
+    <!-- CSS Style Link -->
     <link rel="stylesheet" href="css/main.css" />
+    <!-- FONTAWESOME CDN LINK -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <section id="hero-section">
-      <div class="navbar">
-        <div class="logo-con"><img src="assets/logo.png" alt="" /></div>
+      <div class="con-lg center">
+        <div class="navbar">
+          <div class="logo-con"><img src="assets/logo.png" alt="" /></div>
 
-        <ul class="nav-list">
-          <li class="list-items"><a href="#" class="links">Plan</a></li>
-          <li class="list-items">
-            <a href="#" class="links">TradeStops Blog</a>
-          </li>
-          <li class="list-items">
-            <a href="#" class="links">TradeStops Library</a>
-          </li>
-        </ul>
+          <i class="fa-solid fa-bars menu-btn icons"></i>
 
-        <div class="cta-con">
-          <a class="btn btn-outline">Login</a>
-          <a class="btn btn-sec">Sign up</a>
+          <ul class="nav-list">
+            <li class="list-items"><a href="#" class="links">Plan</a></li>
+            <li class="list-items">
+              <a href="#" class="links">TradeStops Blog</a>
+            </li>
+            <li class="list-items">
+              <a href="#" class="links">TradeStops Library</a>
+            </li>
+
+            <i class="fa-regular fa-circle-xmark exit-btn icons"></i>
+            <div class="cta-con">
+              <a class="btn btn-outline">Login</a>
+              <a class="btn btn-sec">Sign up</a>
+            </div>
+          </ul>
         </div>
       </div>
       <div class="hero-content-wrapper con-md center">
@@ -220,6 +234,19 @@
         </div>
       </div>
     </section>
-    <section class="sections"></section>
+    <section class="sections" id="invest-section">
+      <h2 class="section-title">Invest with confidence</h2>
+      <div class="con-md center tac">
+        <h3 class="heading-md">
+          Manage the ups and downs of the market confidently and stress-free
+          with the TradeStops investment tools and system.
+        </h3>
+        <div class="btn-con">
+          <a href="#" class="btn btn-outline">Create an Account</a>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/app.js"></script>
   </body>
 </html>

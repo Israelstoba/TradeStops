@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 #debugCSSInfoBar {
   z-index: 100000;
 }
@@ -14,7 +15,7 @@ img {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 li {
@@ -65,7 +66,6 @@ a {
 }
 
 .small-txt {
-  font-size: 1.3rem;
   font-size: clamp(1.2rem, 1.5vw, 1.3rem);
 }
 
@@ -77,6 +77,11 @@ a {
 
 .heading-sm {
   font-size: 1.2rem;
+}
+
+.heading-md {
+  font-size: 1.6rem;
+  font-weight: 500;
 }
 
 .center {
@@ -103,6 +108,10 @@ a {
   max-width: 1260px;
 }
 
+.spacing {
+  padding-block: 6rem;
+}
+
 .btn-con {
   margin-block: 2rem;
 }
@@ -114,9 +123,11 @@ a {
   font-weight: 500;
   margin-block: 1rem;
   border-radius: 0.5rem;
+  transition: all 0.6s ease;
 }
 .btn:hover {
   scale: 1.05;
+  transition: all 0.6s ease;
 }
 
 .btn-prim {
@@ -137,12 +148,35 @@ a {
 
 .btn-outline {
   background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.btn-outline:hover {
+  background-color: #fff;
+  color: #00712b;
+  border: 1px solid #fff;
+}
+
+.btn-outline-prim {
+  background-color: transparent;
   color: #005bc3;
   border: 1px solid #005bc3;
 }
-.btn-outline:hover {
+.btn-outline-prim:hover {
   background-color: #005bc3;
   color: #fff;
+  border: 1px solid #005bc3;
+}
+
+.btn-outline-sec {
+  background-color: transparent;
+  color: #00712b;
+  border: 1px solid #00712b;
+}
+.btn-outline-sec:hover {
+  background-color: #00712b;
+  color: #fff;
+  border: 1px solid #00712b;
 }
 
 .overlay {

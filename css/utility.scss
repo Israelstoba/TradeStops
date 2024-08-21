@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 #debugCSSInfoBar {
   z-index: 100000;
 }
@@ -22,7 +24,8 @@ $clrGrey200: #5c5c5c;
 $clrGrey300: #adadad;
 $clrGrey400: #ebebeb;
 ///// gradient color variables//////
-$inditom45: linear-gradient(-45deg, #ff9900, #d7ff47);
+$yellowGradient: linear-gradient(-45deg, #ff9900, #d7ff47);
+$greenGradient: linear-gradient(45deg, #0d5812, #42b84a);
 ///////Spacing Variables///////
 $sp0: 0.5rem;
 $sp1: 1rem;
@@ -55,7 +58,9 @@ img {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  // font-family: 'Poppins', sans-serif;
+  // font-family: 'Montserrat', sans-serif;
+  font-family: 'Outfit', sans-serif;
 }
 
 li {
@@ -150,7 +155,6 @@ a {
 }
 
 .small-txt {
-  font-size: 1.3rem;
   font-size: clamp(1.2rem, 1.5vw, 1.3rem);
 }
 
@@ -163,8 +167,12 @@ a {
 .heading-sm {
   font-size: 1.2rem;
 }
+.heading-md {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
 
-///////Containers
+///////Containers////////////
 .center {
   margin-inline: auto;
 }
@@ -187,6 +195,10 @@ a {
   max-width: 1260px;
 }
 
+.spacing {
+  padding-block: $sp6;
+}
+
 ///////////Buttons ////////////
 .btn-con {
   margin-block: $sp2;
@@ -199,9 +211,11 @@ a {
   font-weight: 500;
   margin-block: $sp1;
   border-radius: $sp0;
+  transition: all 0.6s ease;
 
   &:hover {
     scale: 1.05;
+    transition: all 0.6s ease;
   }
 }
 
@@ -223,12 +237,35 @@ a {
 }
 .btn-outline {
   background-color: transparent;
+  color: $fff;
+  border: 1px solid $fff;
+
+  &:hover {
+    background-color: $fff;
+    color: $clrSec100;
+    border: 1px solid $fff;
+  }
+}
+.btn-outline-prim {
+  background-color: transparent;
   color: $clrPrim100;
   border: 1px solid $clrPrim100;
 
   &:hover {
     background-color: $clrPrim100;
     color: $fff;
+    border: 1px solid $clrPrim100;
+  }
+}
+.btn-outline-sec {
+  background-color: transparent;
+  color: $clrSec100;
+  border: 1px solid $clrSec100;
+
+  &:hover {
+    background-color: $clrSec100;
+    color: $fff;
+    border: 1px solid $clrSec100;
   }
 }
 

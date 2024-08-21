@@ -9,19 +9,41 @@
   background-size: cover;
   position: relative;
 
-  .hero-content-wrapper,
-  .navbar {
+  .hero-content-wrapper {
     position: relative;
     z-index: 10;
+  }
+  .navbar {
+    position: relative;
+    z-index: 20;
   }
 
   .navbar {
     padding-block: $sp1;
-    padding-inline: $sp4;
+    padding-inline: $sp2;
     @include flexCenter;
     justify-content: space-between;
 
+    .icons {
+      color: $fff;
+      font-size: 1.6rem;
+    }
+
+    .menu-btn,
+    .exit-btn {
+      display: none;
+    }
+
     .nav-list {
+      display: flex;
+
+      .cta-con {
+        margin-left: $sp5;
+        .btn:nth-child(2) {
+          margin-left: $sp2;
+        }
+      }
+
       .list-items {
         display: inline-block;
         padding-inline: $sp1;
@@ -86,7 +108,7 @@
 }
 
 #testimonial-section {
-  background: $inditom45;
+  background: $yellowGradient;
   min-height: 300px;
   .con-sm {
     position: relative;
@@ -235,6 +257,12 @@
   }
 }
 
+#invest-section {
+  width: 100%;
+  background: $greenGradient;
+  color: $fff;
+}
+
 /////////////////////////////////////////////////////
 //////////////////////Media Query////////////////////
 ////////////////////////////////////////////////////
@@ -249,6 +277,14 @@
 }
 ////////////Tablet View///////////
 @media (width <= 768px) {
+  #hero-section {
+    min-height: 50vh;
+
+    .hero-content-wrapper {
+      height: 50vh;
+    }
+  }
+
   #risk-section {
     .con-md {
       .content-con {
@@ -286,6 +322,62 @@
           grid-column: 1/4;
           grid-row: 3/4;
         }
+      }
+    }
+  }
+}
+////////////Tablet View///////////
+@media (width <= 920px) {
+  #hero-section {
+    .navbar {
+      // flex-direction: column;
+
+      .nav-list {
+        position: fixed;
+        width: 70%;
+        min-height: 100vh;
+        top: 0;
+        right: -70%;
+        background-color: $clrGrey100;
+        padding-top: $sp5;
+        transition: right 0.5s linear;
+        flex-direction: column;
+
+        .cta-con {
+          text-align: center;
+          margin: 0;
+          margin-top: $sp4;
+
+          .btn:nth-child(2) {
+            margin-left: $sp1;
+          }
+        }
+
+        .list-items {
+          display: block;
+          text-align: center;
+          padding: $sp1;
+
+          &:hover {
+            background-color: $clrSec400;
+            color: $clrSec100;
+          }
+          &:hover .links {
+            color: $clrSec100;
+          }
+        }
+
+        .exit-btn {
+          position: absolute;
+          top: $sp1;
+          right: $sp2;
+        }
+      }
+
+      .menu-btn,
+      .exit-btn,
+      .cta-con {
+        display: block;
       }
     }
   }
