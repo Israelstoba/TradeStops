@@ -1,0 +1,227 @@
+#debugCSSInfoBar {
+  z-index: 100000;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-light);
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-inline: auto;
+}
+.row .col-1,
+.row .col-2,
+.row .col-3,
+.row .col-4 {
+  min-width: 200px;
+  flex: 1;
+}
+.row .col-1 {
+  flex-basis: 100%;
+}
+.row .col-2 {
+  flex-basis: 49%;
+}
+.row .col-3 {
+  flex-basis: 32.8%;
+}
+.row .col-4 {
+  flex-basis: 24%;
+}
+
+.sections {
+  padding-block: 3rem;
+  padding-inline: 1rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(1.5rem, 2vw, 3rem);
+}
+
+.small-txt {
+  font-size: 1.3rem;
+  font-size: clamp(1.2rem, 1.5vw, 1.3rem);
+}
+
+.big-txt {
+  line-height: 1.2;
+  font-size: clamp(1.2rem, 3vw, 4rem);
+  font-weight: 600;
+}
+
+.heading-sm {
+  font-size: 1.2rem;
+}
+
+.center {
+  margin-inline: auto;
+}
+
+.tac {
+  text-align: center;
+}
+
+.con-fluid {
+  max-width: 100%;
+}
+
+.con-sm {
+  max-width: 600px;
+}
+
+.con-md {
+  max-width: 960px;
+}
+
+.con-lg {
+  max-width: 1260px;
+}
+
+.btn-con {
+  margin-block: 2rem;
+}
+
+.btn {
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  font-weight: 500;
+  margin-block: 1rem;
+  border-radius: 0.5rem;
+}
+.btn:hover {
+  scale: 1.05;
+}
+
+.btn-prim {
+  background-color: #2289ff;
+  color: #fff;
+}
+.btn-prim:hover {
+  background-color: #005bc3;
+}
+
+.btn-sec {
+  background-color: #00ae42;
+  color: #fff;
+}
+.btn-sec:hover {
+  background-color: #00712b;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #005bc3;
+  border: 1px solid #005bc3;
+}
+.btn-outline:hover {
+  background-color: #005bc3;
+  color: #fff;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.fadeUp {
+  animation: fadeUp linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    scale: 0.2;
+    transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    transform: translateY(0px);
+  }
+}
+.fadeDown {
+  animation: fadeDown linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    scale: 0.2;
+    transform: translateY(-200px);
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    transform: translateY(0px);
+  }
+}
+.fadeInLeft {
+  animation: fadeInLeft linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.fadeInRight {
+  animation: fadeInRight linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}/*# sourceMappingURL=utility.css.map */
